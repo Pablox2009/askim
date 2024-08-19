@@ -51,6 +51,29 @@
                 <img src="css/amar.png" height="40px" width="40px">
             </p> 
         </div>
+        <p class="p7">¡Haz clic en el corazón!</p>
+        <div class="s2">
+            
+            <div class="p6" id="movableText"><center>Te amo<br>Elsa</center></div>
+            <img src="css/corazon.png" class="hear2" id="movableImage" alt="Imagen">
+        </div>
     </footer>
+        <script>
+            const text = document.getElementById('movableText');
+            const image = document.getElementById('movableImage');
+            let moved = false;
+
+            image.addEventListener('click', function(){
+                if (!moved) {
+                    image.style.left = '100px';
+                    text.style.left = '55px'
+                    moved = true;
+                } else {
+                    image.style.left = '60px';
+                    text.style.left = '150px';
+                    moved = false;
+                }
+            });
+        </script>
 </body>
 </html>
